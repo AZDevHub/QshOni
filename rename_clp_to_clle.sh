@@ -11,7 +11,7 @@ rename_clp_to_clle() {
         base_name="${file%.*}"
         
         # Build the new filename with .clle extension
-        new_file="${base_name}.clle"
+        new_file="${base_name}.CLLE"
         
         # Rename the file
         mv "$file" "$new_file"
