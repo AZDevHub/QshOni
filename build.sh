@@ -47,7 +47,7 @@ CURFILE="QSHEXECC.CLLE"
 SRCTEXT="Run QShell Command Line"
 cpy_member
 
-CURFILE="QSHLOGSCAC.CLP"
+CURFILE="QSHLOGSCAC.CLLE"
 SRCTEXT="Scan Qshell Log File for Value"  
 cpy_member
 
@@ -75,7 +75,7 @@ CURFILE="QSHIFSCHKR.RPGLE"
 SRCTEXT="Check for IFS File Existence"
 cpy_member
 
-CURFILE="QSHIFSCHKC.CLP"
+CURFILE="QSHIFSCHKC.CLLE"
 SRCTEXT="Check for IFS File Existence"
 cpy_member
 
@@ -99,7 +99,7 @@ CURFILE="QSHQRYTMP.CMD"
 SRCTEXT="SQL Query Data to Selected Temp Table with RUNSQL"
 cpy_member
 
-CURFILE="QSHQRYTMPC.CLP"
+CURFILE="QSHQRYTMPC.CLLE"
 SRCTEXT="SQL Query Data to Selected Temp Table with RUNSQL"
 cpy_member
 
@@ -107,7 +107,7 @@ CURFILE="QSHCURL.CMD"
 SRCTEXT="Run Curl Command via QShell"
 cpy_member
 
-CURFILE="QSHCURLC.CLP"
+CURFILE="QSHCURLC.CLLE"
 SRCTEXT="Run Curl Command via QShell"
 cpy_member
 
@@ -115,7 +115,7 @@ CURFILE="QSHPORTCHK.CMD"
 SRCTEXT="Check for active TCP/IP Local Port"
 cpy_member
 
-CURFILE="QSHPORTCHC.CLP"
+CURFILE="QSHPORTCHC.CLLE"
 SRCTEXT="Check for active TCP/IP Local Port"
 cpy_member
 
@@ -123,11 +123,11 @@ CURFILE="QSHPORTEND.CMD"
 SRCTEXT="End All Jobs for Active TCP/IP Local Port"
 cpy_member
 
-CURFILE="QSHPORTENC.CLP"
+CURFILE="QSHPORTENC.CLLE"
 SRCTEXT="End All Jobs for Active TCP/IP Local Port"
 cpy_member
 
-CURFILE="QSHSETPROC.CLP"
+CURFILE="QSHSETPROC.CLLE"
 SRCTEXT="Set up .profile, .bash_profile and .bashrc files"
 cpy_member
 
@@ -259,7 +259,7 @@ CURFILE="QSHQRYSRC.CMD"
 SRCTEXT="SQL Query Data via SQL Source Member to Temp Table"
 cpy_member
 
-CURFILE="QSHQRYSRCC.CLP"
+CURFILE="QSHQRYSRCC.CLLE"
 SRCTEXT="SQL Query Data via SQL Source Member to Temp Table"
 cpy_member
 
@@ -271,7 +271,7 @@ CURFILE="QSHSAVLIB.CMD"
 SRCTEXT="Save Library to IFS Save File"
 cpy_member
 
-CURFILE="QSHSAVLIBC.CLP"
+CURFILE="QSHSAVLIBC.CLLE"
 SRCTEXT="Save Library to IFS Save File"
 cpy_member
 
@@ -279,11 +279,11 @@ CURFILE="QSHSAVIFS.CMD"
 SRCTEXT="Save IFS Objects to IFS Save File"
 cpy_member
 
-CURFILE="QSHSAVIFSC.CLP"
+CURFILE="QSHSAVIFSC.CLLE"
 SRCTEXT="Save IFS Objects to IFS Save File"
 cpy_member
 
-CURFILE="SRCBLDC.CLP"
+CURFILE="SRCBLDC.CLLE"
 SRCTEXT="Build cmds from QSHONI/SOURCE file"   
 cpy_member
 
@@ -304,7 +304,7 @@ SRCTEXT="Version Notes"
 cpy_member
 
 # Create and run build program
-system -q "CRTCLPGM PGM(${SRCLIB}/SRCBLDC) SRCFILE(${SRCLIB}/${SRCFILE})"
+system -q "CRTBNDCL PGM(${SRCLIB}/SRCBLDC) SRCFILE(${SRCLIB}/${SRCFILE}) REPLACE(*YES)"
 system -v "CALL PGM(${SRCLIB}/SRCBLDC)"
 
 echo "${SRCLIBTEXT} library ${SRCLIB} was created and programs compiled."
